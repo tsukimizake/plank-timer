@@ -7,6 +7,10 @@ plank:
   just count_30
   say "switch"
   just count_30
+  say "side plank"
+  just count_30
+  say "switch"
+  just count_30
   say "back plank"
   just count_30
   say "end"
