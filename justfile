@@ -1,24 +1,14 @@
-set shell := ["nu", "-c"]
+train:
+  node train.ts run plank
 
-plank: 
-  say "start plank in 5 sec"
-  sleep 5sec
-  say "start diagonal plank"
-  just count_30
-  say "switch"
-  just count_30
-  say "side plank"
-  just count_30
-  say "switch"
-  just count_30
-  say "back plank"
-  just count_30
-  say "end"
+plank:
+  node train.ts run plank
 
-count_30:
-  sleep 10sec
-  say "20"
-  sleep 10sec
-  say "10"
-  sleep 10sec
-  say "done"
+kettlebell:
+  node train.ts run kettlebell_swing
+
+say msg:
+  node train.ts say "{{msg}}"
+
+list:
+  node train.ts list

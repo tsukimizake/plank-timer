@@ -1,0 +1,24 @@
+train_start:
+  alias: プランク
+  icon: mdi:timer-outline
+  mode: single
+  sequence:
+    - action: rest_command.train_run
+      data:
+        workout: plank
+
+train_kettlebell_swing:
+  alias: ケトルベルスイング
+  icon: mdi:kettlebell
+  mode: single
+  sequence:
+    - action: rest_command.train_run
+      data:
+        workout: kettlebell_swing
+
+train_stop:
+  alias: トレーニング停止
+  icon: mdi:stop-circle-outline
+  mode: single
+  sequence:
+    - action: rest_command.train_stop

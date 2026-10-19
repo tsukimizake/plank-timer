@@ -1,0 +1,17 @@
+# Add this block to configuration.yaml after creating the Google Home project.
+google_assistant:
+  project_id: YOUR_GOOGLE_HOME_PROJECT_ID
+  service_account: !include SERVICE_ACCOUNT.json
+  expose_by_default: false
+  entity_config:
+    script.train_start:
+      name: プランク
+      aliases:
+        - プランクを始めて
+      expose: true
+    script.train_kettlebell_swing:
+      name: ケトルベルスイング
+      expose: true
+    script.train_stop:
+      name: トレーニング停止
+      expose: true

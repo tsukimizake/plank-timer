@@ -1,0 +1,20 @@
+[Unit]
+Description=Training timer bridge for Home Assistant
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tsukimi
+WorkingDirectory=/home/tsukimi/train
+EnvironmentFile=/home/tsukimi/.config/train/environment
+ExecStart=/usr/bin/node /home/tsukimi/train/train-bridge.ts
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+train_run:
+  url: "http://127.0.0.1:8765/run/{{ workout }}"
+  method: post
+  headers:
+    Authorization: !secret train_bridge_authorization
+  timeout: 5
+
+train_stop:
+  url: http://127.0.0.1:8765/stop
+  method: post
+  headers:
+    Authorization: !secret train_bridge_authorization
+  timeout: 5
