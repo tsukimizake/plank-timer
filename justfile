@@ -1,14 +1,8 @@
 train:
-  node train.ts run plank
+  node train.ts plank
 
 plank:
-  node train.ts run plank
+  node train.ts plank
 
 kettlebell:
-  node train.ts run kettlebell_swing
-
-say msg:
-  node train.ts say "{{msg}}"
-
-list:
-  node train.ts list
+  node train.ts kettlebell_swing

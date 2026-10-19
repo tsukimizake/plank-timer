@@ -16,7 +16,7 @@ Pi へ `train.ts` を反映して `sudo systemctl restart train-bridge.service` 
 
 ## 操作
 
-Pi で `node /home/tsukimi/train/train.ts list` を実行すると種目一覧を確認できます。Home Assistant の `script.train_start` がプランク、`script.train_kettlebell_swing` がケトルベルスイング、`script.train_stop` が停止です。ブリッジの状態は `curl http://127.0.0.1:8765/health` で確認できます。Google Home には「プランクを起動して」「ケトルベルスイングを起動して」と話しかけます。
+種目一覧は `train.ts` の `WORKOUTS` で確認できます。Home Assistant の `script.train_start` がプランク、`script.train_kettlebell_swing` がケトルベルスイング、`script.train_stop` が停止です。ブリッジの状態は `curl http://127.0.0.1:8765/health` で確認できます。Google Home には「プランクを起動して」「ケトルベルスイングを起動して」と話しかけます。
 
 ## Google Home の手動連携
 
