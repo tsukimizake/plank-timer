@@ -26,6 +26,14 @@ export const WORKOUTS = {
       { message: 'バックプランク', seconds: 30, cues: [20, 10] },
     ],
   },
+  pushup: {
+    label: '腕立て',
+    rounds: 1,
+    steps: [
+      { message: 'うでたて', seconds: 10, cues: [9, 8, 7, 6, 5, 4, 3, 2, 1] },
+      { message: 'レスト', seconds: 30, cues: [] },
+    ],
+  },
   kettlebell_swing: {
     label: 'ケトルベルスイング',
     rounds: 6,
@@ -74,7 +82,7 @@ async function runStep(step: Step, signal: AbortSignal): Promise<void> {
 
   for (const remaining of step.cues) {
     await waitUntil(started + (step.seconds - remaining) * 1000, signal);
-    await say(`残り${remaining}秒`, signal);
+    await say('remaining', signal);
   }
 
   await waitUntil(started + step.seconds * 1000, signal);
