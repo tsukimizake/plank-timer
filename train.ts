@@ -82,7 +82,7 @@ async function runStep(step: Step, signal: AbortSignal): Promise<void> {
 
   for (const remaining of step.cues) {
     await waitUntil(started + (step.seconds - remaining) * 1000, signal);
-    await say('remaining', signal);
+    await say(`${remaining}`, signal);
   }
 
   await waitUntil(started + step.seconds * 1000, signal);
